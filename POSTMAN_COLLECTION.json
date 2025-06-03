@@ -1,0 +1,167 @@
+{
+    "info": {
+        "name": "Laravel Employee API",
+        "_postman_id": "c8c0d6e0-9a56-4c89-93f2-df85aa500001",
+        "description": "Collection para testar os endpoints da API de funcionários e departamentos.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Employee",
+            "item": [
+                {
+                    "name": "Listar Todos",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:8000/api/employee"
+                    }
+                },
+                {
+                    "name": "Buscar por ID",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:8000/api/employee/1"
+                    }
+                },
+                {
+                    "name": "Criar",
+                    "request": {
+                        "method": "POST",
+                        "url": "http://localhost:8000/api/employee",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"João\",\n  \"department_id\": 1\n}",
+                            "options": { "raw": { "language": "json" } }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Atualizar",
+                    "request": {
+                        "method": "PATCH",
+                        "url": "http://localhost:8000/api/employee/1",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"João Atualizado\"\n}",
+                            "options": { "raw": { "language": "json" } }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Deletar",
+                    "request": {
+                        "method": "DELETE",
+                        "url": "http://localhost:8000/api/employee/1"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "item": [
+                {
+                    "name": "Listar Todos",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:8000/api/department"
+                    }
+                },
+                {
+                    "name": "Buscar por ID",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:8000/api/department/1"
+                    }
+                },
+                {
+                    "name": "Criar",
+                    "request": {
+                        "method": "POST",
+                        "url": "http://localhost:8000/api/department",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"TI\"\n}",
+                            "options": { "raw": { "language": "json" } }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Atualizar",
+                    "request": {
+                        "method": "PATCH",
+                        "url": "http://localhost:8000/api/department/1",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"Tecnologia da Informação\"\n}",
+                            "options": { "raw": { "language": "json" } }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Deletar",
+                    "request": {
+                        "method": "DELETE",
+                        "url": "http://localhost:8000/api/department/1"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Relacionamentos",
+            "item": [
+                {
+                    "name": "Employees com Department",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:8000/api/employee-with-department"
+                    }
+                },
+                {
+                    "name": "Departments com Employees",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:8000/api/department-with-employee"
+                    }
+                },
+                {
+                    "name": "Departamento de um Funcionário",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:8000/api/employee/1/department"
+                    }
+                },
+                {
+                    "name": "Funcionários de um Departamento",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:8000/api/department/1/employee"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,564 @@
+{
+    "info": {
+        "_postman_id": "YOUR_COLLECTION_ID",
+        "name": "Laravel API Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Authors",
+            "item": [
+                {
+                    "name": "Get All Authors",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/authors",
+                            "host": ["{{base_url}}"],
+                            "path": ["authors"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Author Details",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/authors/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["authors", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store New Author",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"New Author Name\",\n    \"birth_date\": \"1990-01-01\",\n    \"biography\": \"Biography of the new author.\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/authors",
+                            "host": ["{{base_url}}"],
+                            "path": ["authors"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Author",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Updated Author Name\",\n    \"birth_date\": \"1985-05-10\",\n    \"biography\": \"Updated biography.\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/authors/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["authors", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Author",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/authors/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["authors", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Authors with Books",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/authors/with-books",
+                            "host": ["{{base_url}}"],
+                            "path": ["authors", "with-books"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Find Books by Author",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/authors/1/books",
+                            "host": ["{{base_url}}"],
+                            "path": ["authors", "1", "books"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Books",
+            "item": [
+                {
+                    "name": "Get All Books",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/books",
+                            "host": ["{{base_url}}"],
+                            "path": ["books"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Book Details",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/books/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["books", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store New Book",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"New Book Title\",\n    \"synopsis\": \"Synopsis of the new book.\",\n    \"author_id\": 1, \n    \"genre_id\": 1 \n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/books",
+                            "host": ["{{base_url}}"],
+                            "path": ["books"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Book",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Updated Book Title\",\n    \"synopsis\": \"Updated synopsis.\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/books/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["books", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Book",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/books/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["books", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Find Reviews for Book",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/books/1/reviews",
+                            "host": ["{{base_url}}"],
+                            "path": ["books", "1", "reviews"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get All Books Detailed",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/books/all-detailed",
+                            "host": ["{{base_url}}"],
+                            "path": ["books", "all-detailed"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Genres",
+            "item": [
+                {
+                    "name": "Get All Genres",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/genres",
+                            "host": ["{{base_url}}"],
+                            "path": ["genres"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Genre Details",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/genres/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["genres", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store New Genre",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"New Genre Name\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/genres",
+                            "host": ["{{base_url}}"],
+                            "path": ["genres"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Genre",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Updated Genre Name\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/genres/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["genres", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Genre",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/genres/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["genres", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Genres with Books",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/genres/with-books",
+                            "host": ["{{base_url}}"],
+                            "path": ["genres", "with-books"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Find Books by Genre",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/genres/1/books",
+                            "host": ["{{base_url}}"],
+                            "path": ["genres", "1", "books"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Reviews",
+            "item": [
+                {
+                    "name": "Get All Reviews",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/reviews",
+                            "host": ["{{base_url}}"],
+                            "path": ["reviews"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Review Details",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/reviews/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["reviews", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store New Review",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rating\": 5,\n    \"text\": \"Great book!\",\n    \"user_id\": 1,\n    \"book_id\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/reviews",
+                            "host": ["{{base_url}}"],
+                            "path": ["reviews"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Review",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rating\": 4,\n    \"text\": \"Good read!\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/reviews/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["reviews", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Review",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/reviews/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["reviews", "1"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "Get All Users",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/users",
+                            "host": ["{{base_url}}"],
+                            "path": ["users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User Details",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/users/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["users", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store New User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"New User Name\",\n    \"email\": \"newuser@example.com\",\n    \"password\": \"password123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/users",
+                            "host": ["{{base_url}}"],
+                            "path": ["users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Updated User Name\",\n    \"email\": \"updateduser@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/users/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["users", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/users/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["users", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Find Reviews by User",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/users/1/reviews",
+                            "host": ["{{base_url}}"],
+                            "path": ["users", "1", "reviews"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8000/api",
+            "type": "string",
+            "description": "The base URL for your Laravel API (e.g., http://localhost:8000/api)"
+        }
+    ]
+}

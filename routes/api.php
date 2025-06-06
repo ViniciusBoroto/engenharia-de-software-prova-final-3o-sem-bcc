@@ -23,9 +23,9 @@ Route::controller(GenreController::class)->group(function () {
 
 Route::controller(AuthorController::class)->group(function () {
     Route::get('/authors', 'get');
-    Route::get('/authors/{id}', 'details');
     Route::get('/authors/books', 'getWithBooks');
-    Route::get('/authors/books/{id}', 'findBooks');
+    Route::get('/authors/{id}', 'details');
+    Route::get('/authors/{id}/books', 'findBooks');
     Route::post('/authors', 'store');
     Route::patch('/authors/{id}', 'update');
     Route::delete('/authors/{id}', 'delete');
